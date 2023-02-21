@@ -31,9 +31,11 @@
         --whenua: #c3d254;
         --moana: #004669;
         --cloud: #fff;
+        --sand: #f0f7eb;
         --filson: filson-soft, arial, sans-serif;
         --theintranet: 3rem;
         --level2: 1.5rem;
+        --level3: 1rem;
       }
 
       .cloud {
@@ -50,6 +52,10 @@
 
       .kikorangi-bg {
         background-color: var(--kikorangi) !important;
+      }
+
+      .sand-bg {
+        background-color: var(--sand);
       }
 
       .pcc-header-menu {
@@ -69,6 +75,10 @@
         font-size: var(--level2);
       }
 
+      .level3 {
+        font-size: var(--level3);
+      }
+
       a:active,
       a:hover,
       a:link,
@@ -76,18 +86,18 @@
         color: var(--moana);
       }
 
+      .level2 .nav-link:hover {
+        background-color: var(--sand);
+      }
+
+      .level2 .nav-item:hover div {
+        display: flex !important;
+      }
     </style>
 
     <title>Hello, world!</title>
   </head>
   <body>
-    <noscript>
-      <strong
-        >We're sorry but Vue App doesn't work properly without JavaScript
-        enabled. Please enable it to continue.</strong
-      >
-    </noscript>
-
     <ul
       class="
         nav
@@ -120,54 +130,82 @@
       </li>
     </ul>
 
-    <ul class="nav level2 font-weight-bold  justify-content-center">
+    <ul class="nav level2 font-weight-bold justify-content-center position-relative">
       <li class="nav-item">
-        <a class="nav-link" href="#">Kōrero</a>
+        <a
+          class="nav-link"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Korero</a
+        >
+        <div class="position-absolute d-none level3 sand-bg justify-content-space-between" style="left: 0; right: 0">
+          <a class="dropdown-item" href="#">New staff</a>
+          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
+          <a class="dropdown-item" href="#">Internal policies</a>
+          <a class="dropdown-item" href="#">Learning &amp; development</a>
+          <a class="dropdown-item" href="#">Emergency management</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Social</a>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Social</a
+        >
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Our Council</a>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Our Council</a
+        >
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Working here</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Services & Information</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">COVID-19</a>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Working here</a
+        >
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
       </li>
     </ul>
-
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">New staff</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">H&S and wellbeing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Internal policies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Learning & development</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Learning & development</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Emergency management</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Employee survey</a>
-      </li>
-    </ul>
-
-    <h1>Hello, world!</h1>
 
     <div id="app"></div>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
