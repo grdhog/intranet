@@ -31,12 +31,19 @@
         --whenua: #c3d254;
         --moana: #004669;
         --cloud: #fff;
-        --font-family-sans-serif: filson-soft,arial,sans-serif;
+        --filson: filson-soft, arial, sans-serif;
+        --theintranet: 3rem;
+        --level2: 1.5rem;
       }
 
       .cloud {
         color: var(--cloud);
       }
+
+      .moana {
+        color: var(--moana);
+      }
+
       .whenua-bg {
         background-color: var(--whenua) !important;
       }
@@ -48,6 +55,27 @@
       .pcc-header-menu {
         height: 80px;
       }
+
+      body {
+        color: var(--moana);
+        font-family: var(--filson) !important;
+      }
+
+      .theintranet {
+        font-size: var(--theintranet);
+      }
+
+      .level2 {
+        font-size: var(--level2);
+      }
+
+      a:active,
+      a:hover,
+      a:link,
+      a:visited {
+        color: var(--moana);
+      }
+
     </style>
 
     <title>Hello, world!</title>
@@ -70,7 +98,9 @@
       "
     >
       <li class="nav-item">
-        <a class="nav-link h1" href="#"><span class="cloud">the</span>intranet</a>
+        <a class="nav-link theintranet font-weight-bold moana" href="#"
+          ><span class="cloud">the</span>intranet</a
+        >
       </li>
       <li class="nav-item">
         <div class="input-group mb-3">
@@ -87,6 +117,27 @@
             </button>
           </div>
         </div>
+      </li>
+    </ul>
+
+    <ul class="nav level2 font-weight-bold  justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kōrero</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Social</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Our Council</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Working here</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services & Information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">COVID-19</a>
       </li>
     </ul>
 
