@@ -8,6 +8,15 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <script src="https://use.typekit.net/sku4mbn.js"></script>
+    <script>
+      try {
+        Typekit.load({
+          async: true,
+        });
+      } catch (e) {}
+    </script>
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -15,6 +24,31 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
+    <style>
+      :root {
+        --kikorangi: #4ab9d4;
+        --whenua: #c3d254;
+        --moana: #004669;
+        --cloud: #fff;
+        --font-family-sans-serif: filson-soft,arial,sans-serif;
+      }
+
+      .cloud {
+        color: var(--cloud);
+      }
+      .whenua-bg {
+        background-color: var(--whenua) !important;
+      }
+
+      .kikorangi-bg {
+        background-color: var(--kikorangi) !important;
+      }
+
+      .pcc-header-menu {
+        height: 80px;
+      }
+    </style>
 
     <title>Hello, world!</title>
   </head>
@@ -26,25 +60,35 @@
       >
     </noscript>
 
-
-    <ul class="nav">
+    <ul
+      class="
+        nav
+        justify-content-center
+        align-items-center
+        kikorangi-bg
+        pcc-header-menu
+      "
+    >
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link h1" href="#"><span class="cloud">the</span>intranet</a>
       </li>
       <li class="nav-item">
-        <form class="form-inline my-2 my-lg-0">
+        <div class="input-group mb-3">
           <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary whenua-bg" type="button">
+              Button
+            </button>
+          </div>
+        </div>
       </li>
     </ul>
-
 
     <ul class="nav">
       <li class="nav-item">
