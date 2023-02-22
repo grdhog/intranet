@@ -51,7 +51,7 @@
       }
 
       .moana-bg {
-        background-color: var(--moana);
+        background-color: var(--moana) !important;
       }
 
       .whenua-bg {
@@ -116,6 +116,16 @@
 
       .dropdown-toggle::after {
         display: none;
+      }
+
+      @media (min-width: 992px) {
+        .pcc-menu-1 .nav-item:hover {
+          background-color: var(--sand);
+        }
+
+        .pcc-menu-1 .nav-item:hover .dropdown-menu {
+          display: flex !important;
+        }
       }
     </style>
 
@@ -348,7 +358,7 @@
     </ul>
 
     <!-- DEMO OF GOOD MOBILE MENU -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light moana-bg">
       <a class="navbar-brand" href="#">theintranet</a>
       <button
         class="navbar-toggler"
@@ -363,11 +373,10 @@
       </button>
     </nav>
 
-    
-    <!-- collapse popped out -->
+    <!-- DEMO collapse popped out -->
     <div class="navbar-expand-lg">
       <div class="collapse navbar-collapse" id="test1">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto pcc-menu-1">
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -383,6 +392,24 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Korero 1</a>
               <a class="dropdown-item" href="#">Korero 2</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Social
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Social 1</a>
+              <a class="dropdown-item" href="#">Social 2</a>
             </div>
           </li>
         </ul>
