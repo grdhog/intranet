@@ -72,12 +72,8 @@
         font-family: var(--filson) !important;
       }
 
-      .theintranet {
-        font-size: var(--theintranet);
-      }
-
       .navbar-brand {
-        font-size: .8rem;
+        font-size: 0.8rem;        
       }
 
       a:active,
@@ -92,26 +88,37 @@
       }
 
       @media (min-width: 992px) {
+        .navbar-brand {
+          font-size: var(--theintranet);
+        }
+
         .pcc-menu-1 {
           font-size: 1.5rem;
         }
 
         .pcc-menu-1 .nav-item:hover {
           background-color: var(--sand);
+
+        }
+
+        .pcc-menu-1 .nav-item:hover .nav-link {
+          border-left: 1px var(--kikorangi) solid;
+          border-right: 1px var(--kikorangi) solid;
         }
 
         .pcc-menu-1 .nav-item:hover .dropdown-menu {
           display: flex !important;
-        }
-
-        .pcc-menu-1 .nav-item:hover .dropdown-menu {
           left: 0;
           right: 0;
           background-color: var(--sand);
+          margin-top: 0;
+          border-top: 1px var(--kikorangi) solid;
+          border-bottom: 1px var(--kikorangi) solid;
         }
 
         .pcc-menu-1 .nav-item:hover .dropdown-menu .dropdown-item {
           display: inline-block !important;
+          width: auto;
         }
 
         .pcc-position-relative-lg {
@@ -128,19 +135,22 @@
   </head>
   <body>
     <!-- DEMO OF GOOD MOBILE MENU -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light kikorangi-bg">
-      <a class="navbar-brand" href="#">theintranet</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#test1"
-        aria-controls="test1"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light kikorangi-bg justify-content-center align-items-center">
+      <a class="navbar-brand font-weight-bold moana" href="#"><span class="cloud">the</span>intranet</a>
+      <div class="input-group" style="width: auto">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary whenua-bg" type="button">
+            Button
+          </button>
+        </div>
+      </div>
     </nav>
 
     <!-- DEMO collapse popped out -->
@@ -151,6 +161,7 @@
           navbar-collapse
           justify-content-center
           pcc-position-relative-lg
+          show
         "
         id="test1"
       >
@@ -197,39 +208,7 @@
       </div>
     </div>
 
-    <p style="margin-top: 150px">Keep useful</p>
-    <ul
-      class="
-        nav
-        justify-content-center
-        align-items-center
-        kikorangi-bg
-        pcc-header-menu
-      "
-    >
-      <li class="nav-item">
-        <a class="nav-link theintranet font-weight-bold moana" href="#"
-          ><span class="cloud">the</span>intranet</a
-        >
-      </li>
-      <li class="nav-item">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control form-control-lg"
-            placeholder="Recipient's username"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-          />
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary whenua-bg" type="button">
-              Button
-            </button>
-          </div>
-        </div>
-      </li>
-    </ul>
-
+   
     <div id="app"></div>
 
     <script
