@@ -551,5 +551,18 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+
+    <script>
+      $('.dropdown').on('show.bs.dropdown', function (event) {
+        console.log(document.body.clientWidth);       
+        if (document.body.clientWidth >= 992){
+          event.preventDefault();  
+          console.log('not allowing dropdown');
+        }
+      });
+    </script>
+
+
   </body>
 </html>
