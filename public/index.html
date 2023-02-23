@@ -558,11 +558,19 @@
         console.log(document.body.clientWidth);       
         if (document.body.clientWidth >= 992){
           event.preventDefault();  
-          console.log('not allowing dropdown');
+          console.log('Not allowing dropdown');
         }
       });
+
+      window.addEventListener('resize', function(){
+        console.log('In resize', document.body.clientWidth);   
+        if (document.body.clientWidth >= 992){
+          var elements = document.querySelector(".pcc-menu-1 .dropdown");
+          for (i=0;i < elements.length;i++){          
+            console.log(elements[i]);
+          }
+        }    
+      });      
     </script>
-
-
   </body>
 </html>
