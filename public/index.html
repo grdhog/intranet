@@ -18,8 +18,12 @@
     </script>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
 
     <style>
       :root {
@@ -42,12 +46,9 @@
       .cloud-bg {
         background-color: var(--cloud);
       }
+
       .moana {
         color: var(--moana);
-      }
-
-      .moana-bg {
-        background-color: var(--moana) !important;
       }
 
       .whenua-bg {
@@ -75,24 +76,8 @@
         font-size: var(--theintranet);
       }
 
-      .level2 {
-        font-size: var(--level2);
-      }
-
-      .level3 {
-        font-size: var(--level3);
-      }
-
-      .pcc-top-menu {
-        font-size: var(--pcc-top-menu);
-      }
-
-      .pcc-top-menu .nav-link:hover {
-        background-color: var(--sand);
-      }
-
-      .pcc-top-menu .nav-item:hover div {
-        display: flex !important;
+      .navbar-brand {
+        font-size: .8rem;
       }
 
       a:active,
@@ -102,19 +87,15 @@
         color: var(--moana);
       }
 
-      .level2 .nav-link:hover {
-        background-color: var(--sand);
-      }
-
-      .level2 .nav-item:hover div {
-        display: flex !important;
-      }
-
       .dropdown-toggle::after {
         display: none;
       }
 
       @media (min-width: 992px) {
+        .pcc-menu-1 {
+          font-size: 1.5rem;
+        }
+
         .pcc-menu-1 .nav-item:hover {
           background-color: var(--sand);
         }
@@ -122,12 +103,101 @@
         .pcc-menu-1 .nav-item:hover .dropdown-menu {
           display: flex !important;
         }
+
+        .pcc-menu-1 .nav-item:hover .dropdown-menu {
+          left: 0;
+          right: 0;
+          background-color: var(--sand);
+        }
+
+        .pcc-menu-1 .nav-item:hover .dropdown-menu .dropdown-item {
+          display: inline-block !important;
+        }
+
+        .pcc-position-relative-lg {
+          position: relative;
+        }
+
+        .pcc-position-static-lg {
+          position: static;
+        }
       }
     </style>
 
     <title>Hello, world!</title>
   </head>
   <body>
+    <!-- DEMO OF GOOD MOBILE MENU -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light kikorangi-bg">
+      <a class="navbar-brand" href="#">theintranet</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#test1"
+        aria-controls="test1"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <!-- DEMO collapse popped out -->
+    <div class="navbar-expand-lg">
+      <div
+        class="
+          collapse
+          navbar-collapse
+          justify-content-center
+          pcc-position-relative-lg
+        "
+        id="test1"
+      >
+        <ul class="navbar-nav XXX-mr-auto pcc-menu-1">
+          <li class="nav-item dropdown pcc-position-static-lg">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Korero
+            </a>
+            <div
+              class="dropdown-menu justify-content-lg-center"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="#">Korero 1</a>
+              <a class="dropdown-item" href="#">Korero 2</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown pcc-position-static-lg">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Social
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Social 1</a>
+              <a class="dropdown-item" href="#">Social 2</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top: 150px">Keep useful</p>
     <ul
       class="
         nav
@@ -160,396 +230,32 @@
       </li>
     </ul>
 
-    <ul
-      class="
-        nav
-        level2
-        font-weight-bold
-        justify-content-center
-        position-relative
-      "
-    >
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Korero</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Social</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Our people</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Our council</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Working here</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Services & Information</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >COVID-19</a
-        >
-        <div
-          class="
-            position-absolute
-            d-none
-            level3
-            sand-bg
-            justify-content-space-between
-          "
-          style="left: 0; right: 0"
-        >
-          <a class="dropdown-item" href="#">New staff</a>
-          <a class="dropdown-item" href="#">H&amp;S and wellbeing</a>
-          <a class="dropdown-item" href="#">Internal policies</a>
-          <a class="dropdown-item" href="#">Learning &amp; development</a>
-          <a class="dropdown-item" href="#">Emergency management</a>
-        </div>
-      </li>
-    </ul>
-
-    <!-- DEMO OF GOOD MOBILE MENU -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light moana-bg">
-      <a class="navbar-brand" href="#">theintranet</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#test1"
-        aria-controls="test1"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-
-    <!-- DEMO collapse popped out -->
-    <div class="navbar-expand-lg">
-      <div class="collapse navbar-collapse" id="test1">
-        <ul class="navbar-nav mr-auto pcc-menu-1">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Korero
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Korero 1</a>
-              <a class="dropdown-item" href="#">Korero 2</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Social
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Social 1</a>
-              <a class="dropdown-item" href="#">Social 2</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- CURRENT MASTER MENU -->
-    <nav class="navbar navbar-light navbar-expand-lg kikorangi-bg">
-      <a class="navbar-brand" href="#">theintranet</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-
-    <!--- collapse popped out -->
-    <div class="navbar-expand-lg">
-      <div
-        class="
-          collapse
-          navbar-collapse
-          position-relative
-          justify-content-center
-        "
-        id="navbarSupportedContent"
-      >
-        <ul class="navbar-nav pcc-top-menu font-weight-bold">
-          <li class="nav-item dropdown position-static">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Korero
-            </a>
-            <div
-              class="dropdown-menu sand-bg justify-content-start"
-              aria-labelledby="navbarDropdown"
-              style="right: 0"
-            >
-              <a class="" href="#">Korero 1</a>
-              <a class="" href="#">Korero 2</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown position-static">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Social
-            </a>
-            <div
-              class="dropdown-menu sand-bg justify-content-start"
-              aria-labelledby="navbarDropdown"
-              style="right: 0"
-            >
-              <a class="dropdown-item" href="#">Social 1</a>
-              <a class="dropdown-item" href="#">Social 2</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown position-static">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Our people
-            </a>
-            <div
-              class="dropdown-menu sand-bg"
-              aria-labelledby="navbarDropdown"
-              style="right: 0"
-            >
-              <a class="dropdown-item" href="#">Our people 1</a>
-              <a class="dropdown-item" href="#">Our people 2</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown position-static">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Our Council
-            </a>
-            <div
-              class="dropdown-menu sand-bg"
-              aria-labelledby="navbarDropdown"
-              style="right: 0"
-            >
-              <a class="dropdown-item" href="#">Our Council 1</a>
-              <a class="dropdown-item" href="#">Our Council 2</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
     <div id="app"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-      $('.dropdown').on('show.bs.dropdown', function (event) {   
-        if (document.body.clientWidth >= 992){
-          event.preventDefault();  
+      $('.dropdown').on('show.bs.dropdown', function (event) {
+        if (document.body.clientWidth >= 992) {
+          event.preventDefault();
           console.log('Not allowing dropdown');
         }
       });
 
-      window.addEventListener('resize', function(){      
-        if (document.body.clientWidth >= 992){ 
+      window.addEventListener('resize', function () {
+        if (document.body.clientWidth >= 992) {
           $('.pcc-menu-1 .dropdown.show').dropdown('hide');
-        }    
-      });      
+        }
+      });
     </script>
   </body>
 </html>
