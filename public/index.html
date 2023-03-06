@@ -114,6 +114,8 @@
           margin-top: 0;
           border-top: 1px var(--kikorangi) solid;
           border-bottom: 1px var(--kikorangi) solid;
+          top: 51px;
+          z-index: -1;
         }
 
         .pcc-menu-1 .nav-item:hover .dropdown-menu .dropdown-item {
@@ -166,6 +168,7 @@
         id="test1"
       >
         <ul class="navbar-nav XXX-mr-auto pcc-menu-1">
+
           <li class="nav-item dropdown pcc-position-static-lg">
             <a
               class="nav-link dropdown-toggle"
@@ -176,14 +179,25 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Korero
+              Blah
             </a>
-            <div
-              class="dropdown-menu justify-content-lg-center"
-              aria-labelledby="navbarDropdown"
+          </li>
+
+          <li class="nav-item dropdown pcc-position-static-lg">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
             >
-              <a class="dropdown-item" href="#">Korero 1</a>
-              <a class="dropdown-item" href="#">Korero 2</a>
+              K
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">K 1</a>
+              <a class="dropdown-item" href="#">K 2</a>
             </div>
           </li>
 
